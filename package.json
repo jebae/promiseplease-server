@@ -1,8 +1,9 @@
 {
   "scripts": {
     "build": "babel src --out-dir dist --ignore 'src/**/*.test.js'",
-    "test": "NODE_ENV=development jest --watchAll --config ./jest.config.js --runInBand",
-    "start": "NODE_ENV=production pm2 start --interpreter babel-node dist/main.js"
+	"test": "NODE_ENV=development jest --watchAll --config ./jest.config.js --runInBand",
+	"dev": "NODE_ENV=development pm2 start --interpreter babel-node dist/main.js --watch",
+    "start": "NODE_ENV=production pm2 start --interpreter babel-node dist/main.js --watch"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
